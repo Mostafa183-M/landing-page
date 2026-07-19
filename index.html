@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- link style file with html file -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -33,10 +34,10 @@
     <nav>
         <h5 class="nav-head">Nomad Force</h5>
         <ul>
-            <li><a href="#" class="nav-link">home</a></li>
-            <li><a href="#" class="nav-link">our studio</a></li>
-            <li><a href="#" class="nav-link">portfolio</a></li>
-            <li><a href="#" class="nav-link">news & events</a></li>
+            <li><a href="#home" class="nav-link">home</a></li>
+            <li><a href="#about-us" class="nav-link">our studio</a></li>
+            <li><a href="#portfolio" class="nav-link">portfolio</a></li>
+            <li><a href="#news-section" class="nav-link">news & events</a></li>
             <li><a href="#" class="nav-link">contact us</a></li>
         </ul>
     </nav>
@@ -64,8 +65,8 @@
                     <div>
                             <h2>We’re - idealists and <br>strategic thinkers.</h2>
                             <p>Over six years in the video business</p>
-                            <a href="#">Read News & Events</a>
-                            <a href="#">Work with Us</a>
+                            <a href="#" class="about-links">Read News & Events</a><br>
+                            <a href="#" class="about-links">Work with Us</a>
                     </div>
                 </div>
                 <div class="about-image2 about-image">
@@ -74,7 +75,150 @@
             </div>
         </section>
         <!-- end of about section -->
+        <!-- portofolio section -->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio">
+            <div class="portfolio-column">
+                <div class="portfolio-image">
+                    <img src="assets/images/visuals-Y4qzW3AsvqI-unsplash.jpeg" alt="visuals">
+                </div>
+                <h4>Effortless</h4>
+                <span class="red-span">Branding</span>
+                <div class="portfolio-image">
+                    <img src="assets/images/severin-candrian-nn3uIZqmUtE-unsplash.jpeg" alt="severin">
+                    <h4>Health technology</h4>
+                    <span class="green-span">Art Direction</span>
+                </div>
+            </div>
+            <div class="portfolio-column">
+                <div class="portfolio-image">
+                    <img src="assets/images/tyler-nix-Y1drF0Y3Oe0-unsplash.jpeg" alt="tyler">
+                    <h4>Maki</h4>
+                    <span class="yellow-span">Website</span>
+                </div>
+                <div class="portfolio-image">
+                    <img src="assets/images/thought-catalog-gv-T-OjLe4c-unsplash.jpeg" alt="thought-caralog">
+                    <h4>The gig economy</h4>
+                    <span class="blue-span">Graphic</span>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- news section -->
+        <section id="news-section">
+        <h3>News & Events</h3>
+        <div class="news-items">
+            <div class="news-column news-col1">
+                <div class="news-img-wrap yellow">
+                    <span class="badge badge-news">News</span>
+                    <img src="assets/images/caroline-lm-uqveD8dYPUM-unsplash.jpg" alt="caroline">
+                </div>
+                <div class="news-caption">
+                    <a href="#">The rise of the gig economy spells the end for these workers the old system</a>
+                    <p>22 hours ago</p>
+                </div>
+            </div>
+            <div class="news-column news-col2">
+                <div class="news-column-items">
+                    <div class="news-img-wrap blue">
+                        <span class="badge badge-events">Events</span>
+                        <img src="assets/images/jean-philippe-delberghe-MmanXAs1sKw-unsplash.jpeg" alt="jean-philippe">
+                    </div>
+                    <div class="news-image-content">
+                        <a href="#">Job Opportunities: Digital, Marketing</a>
+                        <p>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2"><path d="M12 22s8-7.5 8-13a8 8 0 10-16 0c0 5.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg>
+                            Alaska, August 6, 2021
+                        </p>
+                    </div>
+                </div>
+                <div class="news-column-items">
+                    <div class="news-img-wrap green">
+                        <span class="badge badge-news-alt">News</span>
+                        <img src="assets/images/maria-stewart-p4tj0g-_aMM-unsplash.jpeg" alt="maria-stewart">
+                    </div>
+                    <div class="news-image-content">
+                        <a href="#">What happened to new viral video?</a>
+                        <p>6 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- end of news-section -->
+         <!-- contact us section -->
+        <section id="contact-us-section">
+            <h4>Dont' be shy, write to us</h4>
+            <form>
+                <div class="row-inputs">
+                    <div class="col1-input col-inputs">
+                        <label for="name">Name</label><br>
+                        <input type="text" placeholder="Full name">
+                    </div>
+                    <div class="col2-input col-inputs">
+                        <label for="email">Email</label><br>
+                        <input type="text" placeholder="Email address">
+                    </div>
+                </div>
+                <div class="row-textarea">
+                    <label for="helping">How can we help?</label><br>
+                    <textarea name="helping" placeholder="Tell us about the project"></textarea>
+                </div>
+                <div class="services">
+                    <label for="services" class="services-label">services</label>
+                    <div class="services-items">
+                        <div class="services-item">
+                            <input type="checkbox" name="services" value="Branding"><label>Branding</label>
+                        </div>
+                        <div class="services-item">
+                            <input type="checkbox" name="services" value="Digital Experiences"><label>Digital Experiences</label>
+                        </div>
+                        <div class="services-item">
+                            <input type="checkbox" name="services" value="Web Development"><label>Web Development</label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+        <!-- end of contact us section -->
+    <section class="map-section">
+    <iframe
+        src="https://www.google.com/maps?q=Avenida+L%C3%BAcio+Costa,+Rio+de+Janeiro,+Brazil&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    </section>
     </main>
     <!-- end of main section -->
+    <!-- footer section  -->
+    <footer>
+        <section id="footer-section">
+
+    <div class="footer-col">
+        <h5>
+            <i class="fa-solid fa-location-dot"></i>
+            State of Rio de Janeiro, Brazil
+        </h5>
+
+        <a href="mailto:info@company.com">info@company.com</a>
+
+        <p>Copyright © Nomad Force 2021</p>
+        <p>Design: <span>TemplateMo</span></p>
+    </div>
+
+    <div class="footer-col social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+</section>
+
+    </footer>
 </body>
 </html>

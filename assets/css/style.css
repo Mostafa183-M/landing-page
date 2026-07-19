@@ -7,9 +7,10 @@
     font-weight: weight;
     font-style: normal;
 }
-body{
-    height: 50000px;
+html{
+    scroll-behavior: smooth;
 }
+
 /* header section */
 header{
     height: 92vh;
@@ -55,7 +56,6 @@ header{
 }
 
 /* nav section */
-
 nav{ 
     position: sticky;
     top: 0;
@@ -84,13 +84,34 @@ nav ul li a{
     text-transform: capitalize;
     text-decoration: none;
     color: black;
-    opacity: .8;
+    opacity: .4;
     font-size: 1.2rem;
     padding: 5px;
+    position: relative;
+    transition-duration: 0.8s;
+}
+nav ul li a::after{
+    opacity: 0;
+    content: "";
+    position: absolute;
+    background-color: #FFC107;
+    width: 13px;
+    height: 13px;
+    margin: 0 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 25px;
+    transition-duration: .8s;
+
+}
+nav ul li a:hover{
+    opacity: 1;
+}
+nav ul li a:hover::after{
+    opacity: 1;
 }
 
 /* about us section */
-
 .about-us-content{
     color: black;
     width: 75%;
@@ -129,11 +150,385 @@ nav ul li a{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
+}
+.about-team .about-card div{
+    margin: auto;
 }
 .about-team .about-card div h2{
     font-size: 3rem;
+    margin: 1rem 0;
 }
 .about-team .about-image2{
     width: 50%;
+}
+.about-card div a{
+    font-size: 1.1rem;
+    opacity: 0.8;
+    text-decoration: none;
+    color-interpolation-filters: white;
+    display: inline-block;
+    margin: 0.4rem 0;
+}
+.about-links{
+    padding: 0.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+/* portfolio sevtion */
+#portfolio{
+    padding: 7rem 0;
+}
+#portfolio h2{
+    font-size: 4rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+.portfolio{
+    margin:auto;
+    width: 70%;
+    display: flex;
+    gap: 2rem;
+}
+.portfolio-column h4{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+.portfolio-column span{
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 5rem;
+}
+.portfolio-column .green-span{
+    color: #198754;
+}
+.portfolio-column .blue-span{
+    color: #0dcaf0;
+}
+.portfolio-column .red-span{
+    color: #dc3545;
+}
+.portfolio-column .yelloq-span{
+    color: #ffc107;
+}
+.portfolio .portfolio-column .portfolio-image{
+    overflow: hidden;
+}
+.portfolio .portfolio-column .portfolio-image img{
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+.portfolio .portfolio-column .portfolio-image img:hover{
+    scale: 1.1;
+}
+
+/* News section */
+#news-section{
+    background-color: #F2F2F2;
+    padding: 5rem;
+}
+#news-section h3{
+    margin: 0 0 4rem 0;
+    text-align: center;
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+#news-section .news-items{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+#news-section .news-items .news-col1{
+    width: 45%;
+}
+.news-col1 .news-img-wrap{
+    position: relative;
+}
+.news-col1 img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.news-col1 .news-caption{
+    margin-top: 1.5rem;
+}
+.news-col1 .news-caption a{
+    display:block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #374151;
+    text-decoration: none;
+    line-height: 1.3;
+    margin-bottom: .75rem;
+}
+.news-col1 .news-caption a:hover{
+    color: #111827;
+}
+.news-col1 .news-caption p{
+    margin: 0;
+    color: #6b7280;
+    font-size: .95rem;
+}
+#news-section .news-items .news-col2{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.news-col2 .news-column-items{
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.news-col2 .news-img-wrap{
+    position: relative;
+    flex: 0 0 auto;
+    width: 45%;
+}
+.news-col2 .blue::after{
+    content: "";
+    position: absolute;
+    transition-duration: 1s;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color:#1D5FE0 ;
+}
+.news-col2 .news-img-wrap:hover::after{
+    width: 100%;
+}
+.green::after{
+    content: "";
+    position: absolute;
+    transition-duration: 1s;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color:#14795A;
+}
+.green:hover::after{
+    width: 100%;
+}
+.yellow::after{
+    content: "";
+    position: absolute;
+    transition-duration: 1s;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color:#E8A812;
+}
+.yellow:hover::after{
+    width: 100%;
+}
+.news-col2 .news-img-wrap img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+.news-image-content{
+    flex: 1;
+    padding-top: .25rem;
+}
+.news-image-content a{
+    display:block;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #374151;
+    text-decoration: none;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+.news-image-content a:hover{
+    color: #111827;
+}
+.news-image-content p{
+    margin: 0;
+    color: #6b7280;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+}
+.badge-news-alt{
+     background-color: #14795A; 
+}
+.news-image-content p svg{
+    flex: 0 0 auto;
+}
+.badge-news{
+     background-color: #E8A812;
+    }
+    .badge-events{ 
+        background-color: #1D5FE0; 
+    }
+.badge{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .5rem 1.1rem;
+    font-size: .85rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* contact us section */
+#contact-us-section h4{
+    margin: 5rem 0;
+    font-size: 4rem;
+    text-align: center;
+}
+#contact-us-section form{
+    width: 50%;
+    margin: auto;
+}
+#contact-us-section .row-inputs{
+    display: flex;
+    justify-content: space-between;
+}
+#contact-us-section .row-inputs .col-inputs{
+    width: 40%;
+}
+#contact-us-section .row-inputs input,#contact-us-section .row-textarea textarea{
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border-color:#F2F2F2 ;
+    font-size: 1rem;
+    transition-duration: 1s;
+}
+#contact-us-section .row-inputs input:focus{
+    background-color: #202428;
+    color: white;
+}
+#contact-us-section .row-textarea textarea:focus{
+    background-color: #202428;
+    color: white;
+}
+#contact-us-section .row-inputs .col-inputs label,#contact-us-section .row-textarea label{
+    font-size: 1.4rem;
+    display: inline-block;
+    margin: 0.8rem 0;
+    opacity: 0.7;
+}
+#contact-us-section .row-textarea{
+    margin: 2rem 0;
+    width: 100%;
+}
+#contact-us-section .row-textarea textarea{
+    height: 15rem;
+}
+#contact-us-section .services .services-label{
+    font-size:2.2rem ;
+    opacity: 0.7;
+}
+.services .services-item{
+    display: flex;
+    gap: 1rem;
+}
+.services .services-item label{
+    font-size: 1.2rem;
+}
+.services .services-items{
+    margin: 2rem 0 4rem 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+#contact-us-section input[type="submit"]{
+    padding: 1.5rem 6rem;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition-duration: 0.8s;
+    border: none ;
+    display: block;
+    margin:2rem auto;
+}
+#contact-us-section input[type="submit"]:hover{
+    background-color: #FFC107;
+}
+
+/* map section */
+.map-section{
+    width:100%;
+    height:500px;
+    overflow:hidden;
+}
+
+.map-section iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    display:block;
+}
+/* footer-section */
+#footer-section{
+    background:#000;
+    color:#fff;
+    padding:80px 12%;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+}
+
+.footer-col h5{
+    font-size:36px;
+    font-weight:700;
+    margin-bottom:35px;
+}
+
+.footer-col h5 i{
+    margin-right:10px;
+    font-size:30px;
+}
+
+.footer-col a{
+    display:block;
+    color:#bdbdbd;
+    text-decoration:none;
+    font-size:28px;
+    margin-bottom:60px;
+    transition:.3s;
+}
+
+.footer-col a:hover{
+    color:#fff;
+}
+
+.footer-col p{
+    color:#777;
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+.footer-col span{
+    color:#999;
+}
+
+.social-icons{
+    display:flex;
+    gap:25px;
+}
+
+.social-icons a{
+    color:#777;
+    font-size:26px;
+    transition:.3s;
+    margin:0;
+}
+
+.social-icons a:hover{
+    color:#fff;
 }
