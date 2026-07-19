@@ -208,7 +208,7 @@ nav ul li a:hover::after{
 .portfolio-column .red-span{
     color: #dc3545;
 }
-.portfolio-column .yelloq-span{
+.portfolio-column .yellow-span{
     color: #ffc107;
 }
 .portfolio .portfolio-column .portfolio-image{
@@ -219,7 +219,7 @@ nav ul li a:hover::after{
     cursor: pointer;
 }
 .portfolio .portfolio-column .portfolio-image img:hover{
-    scale: 1.1;
+    scale: 1.04;
 }
 
 /* News section */
