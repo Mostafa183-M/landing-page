@@ -134,7 +134,57 @@ nav ul li a:hover::after{
     opacity: .4;
 }
 .about-team{
+    position: relative;
     display: flex;
+}
+.about-team .layer-name{
+    bottom: 0;
+    right: 0;
+    padding: 2rem 5rem;
+    position: absolute;
+    background-color: #0dcaf0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-layer {
+    margin-right: 2rem;
+}
+.left-layer h3{
+    font-size: 3rem;
+}
+.carousel-nav{
+    display:flex;
+    gap:1.25rem;
+}
+
+.nav-btn{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background-color:#0E6472;
+    border:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:background-color .25s ease, transform .2s ease;
+}
+.nav-btn:hover{
+    background-color:#0A505C;
+    transform:translateY(-3px);
+}
+.nav-btn:active{
+    transform:translateY(0);
+}
+.nav-btn svg{
+    width:22px;
+    height:22px;
+    stroke:#ffffff;
+    fill:none;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
 }
 .about-team .about-image1{
     width: 25%;
